@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		041519491991CA070003D64A /* stdev.csv in Resources */ = {isa = PBXBuildFile; fileRef = 041519461991CA070003D64A /* stdev.csv */; };
+		0415194B1991D1600003D64A /* projections.csv in Resources */ = {isa = PBXBuildFile; fileRef = 0415194A1991D1600003D64A /* projections.csv */; };
+		042488C81992FE50001F51F5 /* NumberTeamsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 042488C71992FE50001F51F5 /* NumberTeamsViewController.m */; };
+		044521FE1991A8E9000BB5B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044521FD1991A8E9000BB5B1 /* Foundation.framework */; };
+		044522001991A8E9000BB5B1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044521FF1991A8E9000BB5B1 /* CoreGraphics.framework */; };
+		044522021991A8E9000BB5B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044522011991A8E9000BB5B1 /* UIKit.framework */; };
+		044522081991A8E9000BB5B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044522061991A8E9000BB5B1 /* InfoPlist.strings */; };
+		0445220A1991A8E9000BB5B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044522091991A8E9000BB5B1 /* main.m */; };
+		0445220E1991A8E9000BB5B1 /* FantasyAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445220D1991A8E9000BB5B1 /* FantasyAppDelegate.m */; };
+		044522111991A8E9000BB5B1 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0445220F1991A8E9000BB5B1 /* Main_iPhone.storyboard */; };
+		044522141991A8E9000BB5B1 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 044522121991A8E9000BB5B1 /* Main_iPad.storyboard */; };
+		044522171991A8E9000BB5B1 /* FantasyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044522161991A8E9000BB5B1 /* FantasyViewController.m */; };
+		044522191991A8E9000BB5B1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 044522181991A8E9000BB5B1 /* Images.xcassets */; };
+		044522201991A8E9000BB5B1 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0445221F1991A8E9000BB5B1 /* XCTest.framework */; };
+		044522211991A8E9000BB5B1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044521FD1991A8E9000BB5B1 /* Foundation.framework */; };
+		044522221991A8E9000BB5B1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 044522011991A8E9000BB5B1 /* UIKit.framework */; };
+		0445222A1991A8E9000BB5B1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 044522281991A8E9000BB5B1 /* InfoPlist.strings */; };
+		0445222C1991A8E9000BB5B1 /* FantasyDrafterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445222B1991A8E9000BB5B1 /* FantasyDrafterTests.m */; };
+		044522391991A903000BB5B1 /* Fantasy.m in Sources */ = {isa = PBXBuildFile; fileRef = 044522381991A903000BB5B1 /* Fantasy.m */; };
+		0445223D1991A936000BB5B1 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445223C1991A936000BB5B1 /* Player.m */; };
+		044522401991A942000BB5B1 /* PlayerIdent.m in Sources */ = {isa = PBXBuildFile; fileRef = 0445223F1991A942000BB5B1 /* PlayerIdent.m */; };
+		044DC08F19931084002FD429 /* MyPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DC08E19931084002FD429 /* MyPickViewController.m */; };
+		044DC0921993109D002FD429 /* NumRoundsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 044DC0911993109D002FD429 /* NumRoundsViewController.m */; };
+		045066911996756C003187B3 /* AdjustProjectionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045066901996756C003187B3 /* AdjustProjectionsViewController.m */; };
+		046679061995387000F431F6 /* BestAvailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 046679051995387000F431F6 /* BestAvailViewController.m */; };
+		0481E9C61993D89F0066BF58 /* DraftHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0481E9C51993D89F0066BF58 /* DraftHistoryViewController.m */; };
+		0486931F1993E50B00A39402 /* YourPickViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0486931E1993E50B00A39402 /* YourPickViewController.m */; };
+		04C8DED31993370A007C140F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 044522091991A8E9000BB5B1 /* main.m */; };
+		04EF553C199431E00062EF0B /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EF553B199431E00062EF0B /* SettingsViewController.m */; };
+		04EF553F199443990062EF0B /* CustomScoringViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04EF553E199443990062EF0B /* CustomScoringViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		044522231991A8E9000BB5B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 044521F21991A8E9000BB5B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 044521F91991A8E9000BB5B1;
+			remoteInfo = FantasyDrafter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		041519461991CA070003D64A /* stdev.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = stdev.csv; sourceTree = "<group>"; };
+		0415194A1991D1600003D64A /* projections.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = projections.csv; sourceTree = "<group>"; };
+		042488C61992FE50001F51F5 /* NumberTeamsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumberTeamsViewController.h; sourceTree = "<group>"; };
+		042488C71992FE50001F51F5 /* NumberTeamsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumberTeamsViewController.m; sourceTree = "<group>"; };
+		044521FA1991A8E9000BB5B1 /* DraftMetrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DraftMetrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		044521FD1991A8E9000BB5B1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		044521FF1991A8E9000BB5B1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		044522011991A8E9000BB5B1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		044522051991A8E9000BB5B1 /* DraftMetrics-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DraftMetrics-Info.plist"; sourceTree = "<group>"; };
+		044522071991A8E9000BB5B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		044522091991A8E9000BB5B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		0445220B1991A8E9000BB5B1 /* DraftMetrics-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DraftMetrics-Prefix.pch"; sourceTree = "<group>"; };
+		0445220C1991A8E9000BB5B1 /* FantasyAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FantasyAppDelegate.h; sourceTree = "<group>"; };
+		0445220D1991A8E9000BB5B1 /* FantasyAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FantasyAppDelegate.m; sourceTree = "<group>"; };
+		044522101991A8E9000BB5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		044522131991A8E9000BB5B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		044522151991A8E9000BB5B1 /* FantasyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FantasyViewController.h; sourceTree = "<group>"; };
+		044522161991A8E9000BB5B1 /* FantasyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FantasyViewController.m; sourceTree = "<group>"; };
+		044522181991A8E9000BB5B1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0445221E1991A8E9000BB5B1 /* DraftMetricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DraftMetricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0445221F1991A8E9000BB5B1 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		044522271991A8E9000BB5B1 /* DraftMetricsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DraftMetricsTests-Info.plist"; sourceTree = "<group>"; };
+		044522291991A8E9000BB5B1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		0445222B1991A8E9000BB5B1 /* FantasyDrafterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FantasyDrafterTests.m; sourceTree = "<group>"; };
+		044522371991A903000BB5B1 /* Fantasy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fantasy.h; sourceTree = "<group>"; };
+		044522381991A903000BB5B1 /* Fantasy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fantasy.m; sourceTree = "<group>"; };
+		0445223B1991A936000BB5B1 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		0445223C1991A936000BB5B1 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		0445223E1991A942000BB5B1 /* PlayerIdent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerIdent.h; sourceTree = "<group>"; };
+		0445223F1991A942000BB5B1 /* PlayerIdent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerIdent.m; sourceTree = "<group>"; };
+		044DC08D19931084002FD429 /* MyPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyPickViewController.h; sourceTree = "<group>"; };
+		044DC08E19931084002FD429 /* MyPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyPickViewController.m; sourceTree = "<group>"; };
+		044DC0901993109D002FD429 /* NumRoundsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NumRoundsViewController.h; sourceTree = "<group>"; };
+		044DC0911993109D002FD429 /* NumRoundsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NumRoundsViewController.m; sourceTree = "<group>"; };
+		0450668F1996756C003187B3 /* AdjustProjectionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdjustProjectionsViewController.h; sourceTree = "<group>"; };
+		045066901996756C003187B3 /* AdjustProjectionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdjustProjectionsViewController.m; sourceTree = "<group>"; };
+		046679041995387000F431F6 /* BestAvailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BestAvailViewController.h; sourceTree = "<group>"; };
+		046679051995387000F431F6 /* BestAvailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BestAvailViewController.m; sourceTree = "<group>"; };
+		0481E9C41993D89F0066BF58 /* DraftHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DraftHistoryViewController.h; sourceTree = "<group>"; };
+		0481E9C51993D89F0066BF58 /* DraftHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DraftHistoryViewController.m; sourceTree = "<group>"; };
+		0486931D1993E50B00A39402 /* YourPickViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YourPickViewController.h; sourceTree = "<group>"; };
+		0486931E1993E50B00A39402 /* YourPickViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YourPickViewController.m; sourceTree = "<group>"; };
+		04EF553A199431DF0062EF0B /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsViewController.h; sourceTree = "<group>"; };
+		04EF553B199431E00062EF0B /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsViewController.m; sourceTree = "<group>"; };
+		04EF553D199443990062EF0B /* CustomScoringViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomScoringViewController.h; sourceTree = "<group>"; };
+		04EF553E199443990062EF0B /* CustomScoringViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomScoringViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		044521F71991A8E9000BB5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044522001991A8E9000BB5B1 /* CoreGraphics.framework in Frameworks */,
+				044522021991A8E9000BB5B1 /* UIKit.framework in Frameworks */,
+				044521FE1991A8E9000BB5B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0445221B1991A8E9000BB5B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044522201991A8E9000BB5B1 /* XCTest.framework in Frameworks */,
+				044522221991A8E9000BB5B1 /* UIKit.framework in Frameworks */,
+				044522211991A8E9000BB5B1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		043073091992F7AC00D14FA9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				044522151991A8E9000BB5B1 /* FantasyViewController.h */,
+				044522161991A8E9000BB5B1 /* FantasyViewController.m */,
+				0450668F1996756C003187B3 /* AdjustProjectionsViewController.h */,
+				045066901996756C003187B3 /* AdjustProjectionsViewController.m */,
+				042488C61992FE50001F51F5 /* NumberTeamsViewController.h */,
+				042488C71992FE50001F51F5 /* NumberTeamsViewController.m */,
+				044DC08D19931084002FD429 /* MyPickViewController.h */,
+				044DC08E19931084002FD429 /* MyPickViewController.m */,
+				046679041995387000F431F6 /* BestAvailViewController.h */,
+				046679051995387000F431F6 /* BestAvailViewController.m */,
+				04EF553D199443990062EF0B /* CustomScoringViewController.h */,
+				04EF553E199443990062EF0B /* CustomScoringViewController.m */,
+				044DC0901993109D002FD429 /* NumRoundsViewController.h */,
+				044DC0911993109D002FD429 /* NumRoundsViewController.m */,
+				0481E9C41993D89F0066BF58 /* DraftHistoryViewController.h */,
+				0481E9C51993D89F0066BF58 /* DraftHistoryViewController.m */,
+				0486931D1993E50B00A39402 /* YourPickViewController.h */,
+				0486931E1993E50B00A39402 /* YourPickViewController.m */,
+				04EF553A199431DF0062EF0B /* SettingsViewController.h */,
+				04EF553B199431E00062EF0B /* SettingsViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		044521F11991A8E9000BB5B1 = {
+			isa = PBXGroup;
+			children = (
+				044522031991A8E9000BB5B1 /* FantasyDrafter */,
+				044522251991A8E9000BB5B1 /* FantasyDrafterTests */,
+				044521FC1991A8E9000BB5B1 /* Frameworks */,
+				044521FB1991A8E9000BB5B1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		044521FB1991A8E9000BB5B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				044521FA1991A8E9000BB5B1 /* DraftMetrics.app */,
+				0445221E1991A8E9000BB5B1 /* DraftMetricsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		044521FC1991A8E9000BB5B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				044521FD1991A8E9000BB5B1 /* Foundation.framework */,
+				044521FF1991A8E9000BB5B1 /* CoreGraphics.framework */,
+				044522011991A8E9000BB5B1 /* UIKit.framework */,
+				0445221F1991A8E9000BB5B1 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		044522031991A8E9000BB5B1 /* FantasyDrafter */ = {
+			isa = PBXGroup;
+			children = (
+				043073091992F7AC00D14FA9 /* View Controllers */,
+				0415194A1991D1600003D64A /* projections.csv */,
+				041519461991CA070003D64A /* stdev.csv */,
+				0445223A1991A925000BB5B1 /* Fantasy */,
+				0445220C1991A8E9000BB5B1 /* FantasyAppDelegate.h */,
+				0445220D1991A8E9000BB5B1 /* FantasyAppDelegate.m */,
+				0445220F1991A8E9000BB5B1 /* Main_iPhone.storyboard */,
+				044522121991A8E9000BB5B1 /* Main_iPad.storyboard */,
+				044522181991A8E9000BB5B1 /* Images.xcassets */,
+				044522041991A8E9000BB5B1 /* Supporting Files */,
+			);
+			path = FantasyDrafter;
+			sourceTree = "<group>";
+		};
+		044522041991A8E9000BB5B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				044522051991A8E9000BB5B1 /* DraftMetrics-Info.plist */,
+				044522061991A8E9000BB5B1 /* InfoPlist.strings */,
+				044522091991A8E9000BB5B1 /* main.m */,
+				0445220B1991A8E9000BB5B1 /* DraftMetrics-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		044522251991A8E9000BB5B1 /* FantasyDrafterTests */ = {
+			isa = PBXGroup;
+			children = (
+				0445222B1991A8E9000BB5B1 /* FantasyDrafterTests.m */,
+				044522261991A8E9000BB5B1 /* Supporting Files */,
+			);
+			path = FantasyDrafterTests;
+			sourceTree = "<group>";
+		};
+		044522261991A8E9000BB5B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				044522271991A8E9000BB5B1 /* DraftMetricsTests-Info.plist */,
+				044522281991A8E9000BB5B1 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		0445223A1991A925000BB5B1 /* Fantasy */ = {
+			isa = PBXGroup;
+			children = (
+				044522371991A903000BB5B1 /* Fantasy.h */,
+				044522381991A903000BB5B1 /* Fantasy.m */,
+				0445223B1991A936000BB5B1 /* Player.h */,
+				0445223C1991A936000BB5B1 /* Player.m */,
+				0445223E1991A942000BB5B1 /* PlayerIdent.h */,
+				0445223F1991A942000BB5B1 /* PlayerIdent.m */,
+			);
+			name = Fantasy;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		044521F91991A8E9000BB5B1 /* DraftMetrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0445222F1991A8E9000BB5B1 /* Build configuration list for PBXNativeTarget "DraftMetrics" */;
+			buildPhases = (
+				044521F61991A8E9000BB5B1 /* Sources */,
+				044521F71991A8E9000BB5B1 /* Frameworks */,
+				044521F81991A8E9000BB5B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DraftMetrics;
+			productName = FantasyDrafter;
+			productReference = 044521FA1991A8E9000BB5B1 /* DraftMetrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0445221D1991A8E9000BB5B1 /* DraftMetricsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 044522321991A8E9000BB5B1 /* Build configuration list for PBXNativeTarget "DraftMetricsTests" */;
+			buildPhases = (
+				0445221A1991A8E9000BB5B1 /* Sources */,
+				0445221B1991A8E9000BB5B1 /* Frameworks */,
+				0445221C1991A8E9000BB5B1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				044522241991A8E9000BB5B1 /* PBXTargetDependency */,
+			);
+			name = DraftMetricsTests;
+			productName = FantasyDrafterTests;
+			productReference = 0445221E1991A8E9000BB5B1 /* DraftMetricsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		044521F21991A8E9000BB5B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = Fantasy;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = JackCable;
+				TargetAttributes = {
+					044521F91991A8E9000BB5B1 = {
+						DevelopmentTeam = W9L85QEFSW;
+					};
+					0445221D1991A8E9000BB5B1 = {
+						TestTargetID = 044521F91991A8E9000BB5B1;
+					};
+				};
+			};
+			buildConfigurationList = 044521F51991A8E9000BB5B1 /* Build configuration list for PBXProject "DraftMetrics" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 044521F11991A8E9000BB5B1;
+			productRefGroup = 044521FB1991A8E9000BB5B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				044521F91991A8E9000BB5B1 /* DraftMetrics */,
+				0445221D1991A8E9000BB5B1 /* DraftMetricsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		044521F81991A8E9000BB5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				044522141991A8E9000BB5B1 /* Main_iPad.storyboard in Resources */,
+				044522191991A8E9000BB5B1 /* Images.xcassets in Resources */,
+				044522111991A8E9000BB5B1 /* Main_iPhone.storyboard in Resources */,
+				0415194B1991D1600003D64A /* projections.csv in Resources */,
+				044522081991A8E9000BB5B1 /* InfoPlist.strings in Resources */,
+				041519491991CA070003D64A /* stdev.csv in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0445221C1991A8E9000BB5B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0445222A1991A8E9000BB5B1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		044521F61991A8E9000BB5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0486931F1993E50B00A39402 /* YourPickViewController.m in Sources */,
+				042488C81992FE50001F51F5 /* NumberTeamsViewController.m in Sources */,
+				044522171991A8E9000BB5B1 /* FantasyViewController.m in Sources */,
+				04EF553F199443990062EF0B /* CustomScoringViewController.m in Sources */,
+				0445220A1991A8E9000BB5B1 /* main.m in Sources */,
+				044DC08F19931084002FD429 /* MyPickViewController.m in Sources */,
+				044DC0921993109D002FD429 /* NumRoundsViewController.m in Sources */,
+				044522391991A903000BB5B1 /* Fantasy.m in Sources */,
+				046679061995387000F431F6 /* BestAvailViewController.m in Sources */,
+				0481E9C61993D89F0066BF58 /* DraftHistoryViewController.m in Sources */,
+				045066911996756C003187B3 /* AdjustProjectionsViewController.m in Sources */,
+				0445223D1991A936000BB5B1 /* Player.m in Sources */,
+				044522401991A942000BB5B1 /* PlayerIdent.m in Sources */,
+				0445220E1991A8E9000BB5B1 /* FantasyAppDelegate.m in Sources */,
+				04EF553C199431E00062EF0B /* SettingsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0445221A1991A8E9000BB5B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04C8DED31993370A007C140F /* main.m in Sources */,
+				0445222C1991A8E9000BB5B1 /* FantasyDrafterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		044522241991A8E9000BB5B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 044521F91991A8E9000BB5B1 /* DraftMetrics */;
+			targetProxy = 044522231991A8E9000BB5B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		044522061991A8E9000BB5B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044522071991A8E9000BB5B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0445220F1991A8E9000BB5B1 /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044522101991A8E9000BB5B1 /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		044522121991A8E9000BB5B1 /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044522131991A8E9000BB5B1 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		044522281991A8E9000BB5B1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				044522291991A8E9000BB5B1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		0445222D1991A8E9000BB5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0445222E1991A8E9000BB5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		044522301991A8E9000BB5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyDrafter/DraftMetrics-Prefix.pch";
+				INFOPLIST_FILE = "FantasyDrafter/DraftMetrics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = DraftMetrics;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		044522311991A8E9000BB5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyDrafter/DraftMetrics-Prefix.pch";
+				INFOPLIST_FILE = "FantasyDrafter/DraftMetrics-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = DraftMetrics;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		044522331991A8E9000BB5B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasyDrafter.app/FantasyDrafter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyDrafter/FantasyDrafter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "FantasyDrafterTests/DraftMetricsTests-Info.plist";
+				PRODUCT_NAME = DraftMetricsTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		044522341991A8E9000BB5B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/FantasyDrafter.app/FantasyDrafter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "FantasyDrafter/FantasyDrafter-Prefix.pch";
+				INFOPLIST_FILE = "FantasyDrafterTests/DraftMetricsTests-Info.plist";
+				PRODUCT_NAME = DraftMetricsTests;
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		044521F51991A8E9000BB5B1 /* Build configuration list for PBXProject "DraftMetrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0445222D1991A8E9000BB5B1 /* Debug */,
+				0445222E1991A8E9000BB5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0445222F1991A8E9000BB5B1 /* Build configuration list for PBXNativeTarget "DraftMetrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044522301991A8E9000BB5B1 /* Debug */,
+				044522311991A8E9000BB5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		044522321991A8E9000BB5B1 /* Build configuration list for PBXNativeTarget "DraftMetricsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				044522331991A8E9000BB5B1 /* Debug */,
+				044522341991A8E9000BB5B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 044521F21991A8E9000BB5B1 /* Project object */;
+}
