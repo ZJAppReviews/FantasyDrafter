@@ -37,15 +37,18 @@ static int TOTAL_PICKS = 14;
     BOOL noCalc;
     
     NSArray *scoring;
+    
+    NSUserDefaults *userDefaults;
 }
 
 -(instancetype) initWithNumTeams:(int)num_teams withNumPick:(int)my_pick withNumRoundsInAdvance :(int)num_rounds_in_advance {
+    userDefaults = [NSUserDefaults standardUserDefaults];
     if(self = [super init]) {
         NUM_TEAMS = num_teams;
         MY_PICK = my_pick;
         NUM_ROUNDS_IN_ADVANCE = num_rounds_in_advance;
         
-        scoring = [[NSUserDefaults standardUserDefaults] objectForKey:@"SCORING"];
+        scoring = [userDefaults objectForKey:@"SCORING"];
         
         [self prepValues];
     }
@@ -53,6 +56,7 @@ static int TOTAL_PICKS = 14;
 }
 
 -(instancetype) initWithNumTeams:(int)num_teams withNumPick:(int)my_pick withNumRoundsInAdvance:(int)num_rounds_in_advance withCustomScoring:(NSArray *)customRules {
+    userDefaults = [NSUserDefaults standardUserDefaults];
     if(self = [super init]) {
         NUM_TEAMS = num_teams;
         MY_PICK = my_pick;
@@ -67,10 +71,9 @@ static int TOTAL_PICKS = 14;
 -(void) prepValues {
     
     
-    if([[NSUserDefaults standardUserDefaults] objectForKey:@"FILES_SAVED"] == nil) {
+    if([userDefaults objectForKey:@"FILES_SAVED"] == nil) {
         [self saveFilesToDocuments];
-        [[NSUserDefaults standardUserDefaults] setObject:@"1" forKey:@"FILES_SAVED"];
-        [[NSUserDefaults standardUserDefaults] synchronize];
+        [userDefaults setObject:@"1" forKey:@"FILES_SAVED"];
     }
     
     
@@ -228,8 +231,8 @@ static int TOTAL_PICKS = 14;
         for(int i=0; i<icount; i++) {
             p.team = [p.team stringByReplacingOccurrencesOfString:illegalChars[i] withString:@""];
         }
-        p.ADP = [row[TOTAL_PICKS+1] floatValue];
-        p.stdev = 0;
+        p.ADP = [row[10] floatValue];
+        //p.stdev = 1;
         NSUInteger mpcount = myPositions.count;
         for(int i=0; i<mpcount; i++) {
             if([myPositions[i] isEqualToString:[row[2] stringByReplacingOccurrencesOfString:@"\"" withString:@""]]) {
@@ -237,17 +240,24 @@ static int TOTAL_PICKS = 14;
             }
         }
         p.ID = (int) players.count;
-        p.points = [row[13] floatValue]*[scoring[0] floatValue]; //passYds
-        p.points += [row[14] floatValue]*[scoring[1] floatValue]; //passTds
-        p.points += [row[15] floatValue]*[scoring[2] floatValue]; //passInt
-        p.points += [row[16] floatValue]*[scoring[3] floatValue]; //rushYds
-        p.points += [row[17] floatValue]*[scoring[4] floatValue]; //rushTds
-        p.points += [row[18] floatValue]*[scoring[5] floatValue]; //rec
-        p.points += [row[19] floatValue]*[scoring[6] floatValue]; //recYds
-        p.points += [row[20] floatValue]*[scoring[7] floatValue]; //recTds
-        if(p.position == 0) p.points += [row[21] floatValue]*[scoring[8] floatValue]; //twoPts PASS
-        else p.points += [row[21] floatValue]*[scoring[9] floatValue]; //twoPts RUSH / REC
-        p.points += [row[22] floatValue]*[scoring[10] floatValue]; //fumbles
+        p.rank = [row[0] floatValue];
+        
+        if([[userDefaults objectForKey:@"updatedProjections"] isEqualToString:@"1"]) {
+            p.points = [row[11] floatValue]*[scoring[0] floatValue]; //passYds
+            p.points += [row[12] floatValue]*[scoring[1] floatValue]; //passTds
+            p.points += [row[13] floatValue]*[scoring[2] floatValue]; //passInt
+            p.points += [row[14] floatValue]*[scoring[3] floatValue]; //rushYds
+            p.points += [row[15] floatValue]*[scoring[4] floatValue]; //rushTds
+            p.points += [row[16] floatValue]*[scoring[5] floatValue]; //rec
+            p.points += [row[17] floatValue]*[scoring[6] floatValue]; //recYds
+            p.points += [row[28] floatValue]*[scoring[7] floatValue]; //recTds
+            if(p.position == 0) p.points += [row[19] floatValue]*[scoring[8] floatValue]; //twoPts PASS
+            else p.points += [row[20] floatValue]*[scoring[9] floatValue]; //twoPts RUSH / REC
+            p.points += [row[21] floatValue]*[scoring[10] floatValue]; //fumbles
+        } else {
+            p.points = [row[7] floatValue];
+        }
+        
         [players addObject:p];
         PlayerIdent *ident = p.getPID;
         if([PlayerIDs objectForKey:ident] != nil) {
@@ -255,9 +265,14 @@ static int TOTAL_PICKS = 14;
         }
         [PlayerIDs setObject:N(p.ID) forKey:ident];
     }
+    
+    if(noCalc) {
+        return;
+    }
+    
     NSArray *stdev = [self getContentsOfUserFile:@"stdev" : @"csv"];
     NSUInteger stdcount = stdev.count;
-    for(int i=1;/*header*/ i<stdcount; i++) {
+    for(int i=1; i<stdcount; i++) {
         if([stdev[i] isEqualToString:@""]) continue;
         NSArray *row = [stdev[i] componentsSeparatedByString:@","];
         PlayerIdent *thisPlayer = [[PlayerIdent alloc] initWithName:row[1] andTeam:row[3]];
@@ -591,9 +606,27 @@ static int TOTAL_PICKS = 14;
 
 }
 
+-(NSString*) getFirstLineOfURL : (NSString*) urlStr {
+    NSURL *url = [NSURL URLWithString:urlStr];
+    
+    NSString *content = [NSString stringWithContentsOfURL: url encoding:NSASCIIStringEncoding error:nil];
+    
+    NSArray* allLinedStrings = [NSArray arrayWithArray: [content componentsSeparatedByCharactersInSet: [NSCharacterSet newlineCharacterSet]]];
+    
+    if(content == nil || [allLinedStrings[0]  isEqual: @"<html><head>"]) {
+        return @"";
+    }
+    
+    return allLinedStrings[0];
+}
+
 -(void) saveFilesToDocuments {
-    [self saveFileToDocuments:@"http://fantasyfootball.eu5.org/files/projections.csv" :@"projections" :@"csv"];
-    [self saveFileToDocuments:@"http://fantasyfootball.eu5.org/files/stdev.csv" :@"stdev" :@"csv"];
+    [self saveFileToDocuments:@"http://d214mfsab.org/projections.csv" :@"projections" :@"csv"];
+    [self saveFileToDocuments:@"http://d214mfsab.org/stdev.csv" :@"stdev" :@"csv"];
+    NSString* updatedProjections = [self getFirstLineOfURL:@"http://d214mfsab.org/updatedProjections.html"];
+    if ([updatedProjections isEqualToString: @"1"]) {
+        [userDefaults setObject:@"1" forKey:@"updatedProjections"];
+    }
 }
 
 @end

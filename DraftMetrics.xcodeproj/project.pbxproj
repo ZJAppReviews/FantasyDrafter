@@ -498,6 +498,7 @@
 				INFOPLIST_FILE = "FantasyDrafter/DraftMetrics-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = DraftMetrics;
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -513,6 +514,7 @@
 				INFOPLIST_FILE = "FantasyDrafter/DraftMetrics-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = DraftMetrics;
+				PROVISIONING_PROFILE = "37d2db69-1ff6-4841-8d00-aa92459d2a57";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

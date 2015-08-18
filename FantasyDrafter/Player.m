@@ -35,7 +35,7 @@
 }
 
 - (NSComparisonResult)compare:(Player *)otherObject options:(NSStringCompareOptions)mask {
-    return self.points < otherObject.points;
+    return self.rank > otherObject.rank;
 }
 
 @end

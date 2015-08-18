@@ -60,6 +60,25 @@
     //int recomendedPosition = [fantasy getRecomendedPositionForRound:2];
 }
 
+-(void) help {
+    [self alert:@"Welcome" withMessage:@"Fantasy Football DraftMetrics calculates the best picks for your draft. During the draft, select the players who are drafted. You can see the best players for you in the 'My Pick' tab."];
+}
+
+- (IBAction)helpButtonTapped:(id)sender {
+    [self help];
+}
+
+-(void) alert: (NSString*) title withMessage: (NSString*) message {
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:message
+                                                   delegate:self
+                                          cancelButtonTitle:@"Ok"
+                                          otherButtonTitles:nil, nil];
+    
+    [alert show];
+
+}
+
 -(void) refreshController {
     
     [self checkUserDefaults];
@@ -88,9 +107,13 @@
     defaults = [NSUserDefaults standardUserDefaults];
     if([defaults objectForKey:@"NUM_TEAMS"] == nil) [defaults setObject:@8 forKey:@"NUM_TEAMS"];
     if([defaults objectForKey:@"MY_PICK"] == nil) [defaults setObject:@1 forKey:@"MY_PICK"];
-    if([defaults objectForKey:@"NUM_ROUNDS_IN_ADVANCE"] == nil) [defaults setObject:@3 forKey:@"NUM_ROUNDS_IN_ADVANCE"];
+    if([defaults objectForKey:@"NUM_ROUNDS_IN_ADVANCE"] == nil) [defaults setObject:@2 forKey:@"NUM_ROUNDS_IN_ADVANCE"];
     if([defaults objectForKey:@"SHOW_BEST_AVAIL"] == nil) [defaults setObject:@NO forKey:@"SHOW_BEST_AVAIL"];
     if([defaults objectForKey:@"SCORING"] == nil) [defaults setObject:@[@.04, @4, @-2, @.1, @6, @0, @.1, @6, @1, @2, @-2] forKey:@"SCORING"];
+    if([defaults objectForKey:@"firstTime"] == nil) {
+        [defaults setObject:@"true" forKey:@"firstTime"];
+        [self help];
+    }
     [defaults synchronize];
     
 }
@@ -118,11 +141,15 @@
     }
     //cell.selectionStyle = UITableViewCellSelectionStyleNone;
     if (tableView == self.searchDisplayController.searchResultsTableView) {
-        cell.textLabel.text = ((Player*)[filteredPlayers objectAtIndex: indexPath.row]).name;
-        cell.detailTextLabel.text = ((Player*)[filteredPlayers objectAtIndex: indexPath.row]).team;
+        if(indexPath.row < filteredPlayers.count) {
+            cell.textLabel.text = ((Player*)[filteredPlayers objectAtIndex: indexPath.row]).name;
+            cell.detailTextLabel.text = ((Player*)[filteredPlayers objectAtIndex: indexPath.row]).team;
+        }
     } else {
-        cell.textLabel.text = ((Player*)[availablePlayers objectAtIndex: indexPath.row]).name;
-        cell.detailTextLabel.text = ((Player*)[availablePlayers objectAtIndex: indexPath.row]).team;
+        if(indexPath.row < availablePlayers.count) {
+            cell.textLabel.text = ((Player*)[availablePlayers objectAtIndex: indexPath.row]).name;
+            cell.detailTextLabel.text = ((Player*)[availablePlayers objectAtIndex: indexPath.row]).team;
+        }
     }
      return cell;
  }

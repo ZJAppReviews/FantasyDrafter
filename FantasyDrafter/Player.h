@@ -23,6 +23,7 @@
 @property float stdev;
 @property float mean;
 @property float score;
+@property float rank;
 
 -(PlayerIdent*) getPID;
 -(NSString*) toString;
